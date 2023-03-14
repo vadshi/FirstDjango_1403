@@ -5,4 +5,4 @@
 2. `source venv_name/bin/activate`
 3. `pip install -r requirements.txt`
 4. `python manage.py migrate`
-5. `python manage.py runserver
+5. `python manage.py runserver`
