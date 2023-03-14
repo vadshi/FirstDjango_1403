@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Список товаров</h2>
+
+    <ol>
+        {% for item in items %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
