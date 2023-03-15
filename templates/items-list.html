@@ -9,7 +9,7 @@
 
     <ol>
         {% for item in items %}
-            <li>{{ item.name }}</li>
+            <li><a href='/item/{{ item.id }}'>{{ item.name }}</a></li>
         {% endfor %}
     </ol>
 </body>
