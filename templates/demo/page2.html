@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block style %}
+    {# подставляем содержимое блока родительского шаблона #}
+    {{ block.super }}
+    {# добавляем уникальную css для данной страницы #}
+    <link rel="stylesheet" href="new_style.css">
+{% endblock %}
+
+{% block content %}
+    Уникальное содержимое страницы page2.html
+{% endblock %}

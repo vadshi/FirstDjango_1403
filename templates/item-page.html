@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Item page</title>
-</head>
+{% block content %}
+{# Подставляем содержимое файла inc-menu.html #}
+{% include 'inc-menu.html' %}
 
-<body>
-    <header>
-        / <a href="/">Home</a> / <a href="/items">Items</a> / <a href="/about">About</a> /
-    </header>
-    <h2> {{ item.name }} </h2>
-    <div> Количество: {{ item.count | default:"Товар отсутствует на складе" }} </div>
+<h2> {{ item.name }} </h2>
+<div> {{ item.brand }} </div>
+<div> Количество: {{ item.count | default:"Товар отсутствует на складе" }} </div>
 
 
-    <a href="/items">Назад</a>
-</body>
-
-</html>
+<a href="{% url 'items-list' %}">Назад</a>
+{% endblock %}

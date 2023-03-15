@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block style %}
+        {# Это общая css для всех страниц #}
+        <link rel="stylesheet" href="style.css">
+        {# Но каждая страница может содержать доп.уникальные css #}
+    {% endblock %}
+</head>
+<body>
+<header>
+    Общий заголовок всех страниц
+</header>
+<main>
+    {#  Содержимое этого блока уникально на каждой странице #}
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+    Общий футер всех страниц
+</footer>
+</body>
+</html>
